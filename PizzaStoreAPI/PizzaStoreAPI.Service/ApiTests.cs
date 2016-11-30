@@ -13,7 +13,7 @@ namespace PizzaStoreAPI.Tests
 {
     public class ApiTests
     {
-        //Test After API Is Published.
+        //Test After API Is Published
 
         [Fact]
         public void Test_GetAllSauces()
