@@ -172,7 +172,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApiTests.cs" />
     <Compile Include="ApplicationLogic.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CheesesController.cs" />
