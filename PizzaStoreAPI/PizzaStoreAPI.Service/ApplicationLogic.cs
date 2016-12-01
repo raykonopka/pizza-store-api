@@ -107,11 +107,10 @@ namespace PizzaStoreAPI.Service
         #endregion
 
         #region Functions For Ordering Pizza
-        public void sentOrder(OrderDAO newOrder)
+        public List<OrderDAO> GetOrders()
         {
-           psDataClient.postOrder(newOrder);
+            return psDataClient.GetOrders().ToList();
         }
-
 
         #endregion
     }

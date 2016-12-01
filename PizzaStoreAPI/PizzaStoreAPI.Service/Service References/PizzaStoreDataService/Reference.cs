@@ -972,11 +972,11 @@ namespace PizzaStoreAPI.Service.PizzaStoreDataService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPizzaStoreDataService/GetPaymentMethods", ReplyAction="http://tempuri.org/IPizzaStoreDataService/GetPaymentMethodsResponse")]
         System.Threading.Tasks.Task<PizzaStoreAPI.Service.PizzaStoreDataService.PaymentMethodDAO[]> GetPaymentMethodsAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPizzaStoreDataService/postOrder", ReplyAction="http://tempuri.org/IPizzaStoreDataService/postOrderResponse")]
-        bool postOrder(PizzaStoreAPI.Service.PizzaStoreDataService.OrderDAO newOrder);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPizzaStoreDataService/PostNewOrder", ReplyAction="http://tempuri.org/IPizzaStoreDataService/PostNewOrderResponse")]
+        bool PostNewOrder(PizzaStoreAPI.Service.PizzaStoreDataService.OrderDAO newOrder);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPizzaStoreDataService/postOrder", ReplyAction="http://tempuri.org/IPizzaStoreDataService/postOrderResponse")]
-        System.Threading.Tasks.Task<bool> postOrderAsync(PizzaStoreAPI.Service.PizzaStoreDataService.OrderDAO newOrder);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPizzaStoreDataService/PostNewOrder", ReplyAction="http://tempuri.org/IPizzaStoreDataService/PostNewOrderResponse")]
+        System.Threading.Tasks.Task<bool> PostNewOrderAsync(PizzaStoreAPI.Service.PizzaStoreDataService.OrderDAO newOrder);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPizzaStoreDataService/GetPizzas", ReplyAction="http://tempuri.org/IPizzaStoreDataService/GetPizzasResponse")]
         PizzaStoreAPI.Service.PizzaStoreDataService.PizzaDAO[] GetPizzas();
@@ -1076,12 +1076,12 @@ namespace PizzaStoreAPI.Service.PizzaStoreDataService {
             return base.Channel.GetPaymentMethodsAsync();
         }
         
-        public bool postOrder(PizzaStoreAPI.Service.PizzaStoreDataService.OrderDAO newOrder) {
-            return base.Channel.postOrder(newOrder);
+        public bool PostNewOrder(PizzaStoreAPI.Service.PizzaStoreDataService.OrderDAO newOrder) {
+            return base.Channel.PostNewOrder(newOrder);
         }
         
-        public System.Threading.Tasks.Task<bool> postOrderAsync(PizzaStoreAPI.Service.PizzaStoreDataService.OrderDAO newOrder) {
-            return base.Channel.postOrderAsync(newOrder);
+        public System.Threading.Tasks.Task<bool> PostNewOrderAsync(PizzaStoreAPI.Service.PizzaStoreDataService.OrderDAO newOrder) {
+            return base.Channel.PostNewOrderAsync(newOrder);
         }
         
         public PizzaStoreAPI.Service.PizzaStoreDataService.PizzaDAO[] GetPizzas() {

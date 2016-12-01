@@ -178,8 +178,8 @@
     <Compile Include="Controllers\AdditionalCheeseToppingsController.cs" />
     <Compile Include="Controllers\CrustsController.cs" />
     <Compile Include="Controllers\MeatToppingsController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\PaymentMethodsController.cs" />
-    <Compile Include="Controllers\PostOrderController.cs" />
     <Compile Include="Controllers\SaucesController.cs" />
     <Compile Include="Controllers\SizesController.cs" />
     <Compile Include="Controllers\ToppingPlacementsController.cs" />
