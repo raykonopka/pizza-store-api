@@ -63,13 +63,54 @@
   <ItemGroup>
     <Compile Include="ApiTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\PizzaStoreDataService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\PizzaStoreAPI.Service.PizzaStoreDataService.CheeseTypeDAO.datasource" />
+    <None Include="Properties\DataSources\PizzaStoreAPI.Service.PizzaStoreDataService.CrustTypeDAO.datasource" />
+    <None Include="Properties\DataSources\PizzaStoreAPI.Service.PizzaStoreDataService.OrderDAO.datasource" />
+    <None Include="Properties\DataSources\PizzaStoreAPI.Service.PizzaStoreDataService.PaymentMethodDAO.datasource" />
+    <None Include="Properties\DataSources\PizzaStoreAPI.Service.PizzaStoreDataService.PizzaDAO.datasource" />
+    <None Include="Properties\DataSources\PizzaStoreAPI.Service.PizzaStoreDataService.PizzaSizeDAO.datasource" />
+    <None Include="Properties\DataSources\PizzaStoreAPI.Service.PizzaStoreDataService.SauceTypeDAO.datasource" />
+    <None Include="Properties\DataSources\PizzaStoreAPI.Service.PizzaStoreDataService.ToppingCategoryDAO.datasource" />
+    <None Include="Properties\DataSources\PizzaStoreAPI.Service.PizzaStoreDataService.ToppingDAO.datasource" />
+    <None Include="Properties\DataSources\PizzaStoreAPI.Service.PizzaStoreDataService.ToppingListDAO.datasource" />
+    <None Include="Properties\DataSources\PizzaStoreAPI.Service.PizzaStoreDataService.ToppingPlacementDAO.datasource" />
+    <None Include="Service References\PizzaStoreDataService\PizzaStoreDataService.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PizzaStoreAPI.Service\PizzaStoreAPI.Service.csproj">
+      <Project>{34ADE5CC-ED35-4797-A74D-E4B8877D6883}</Project>
+      <Name>PizzaStoreAPI.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\PizzaStoreDataService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PizzaStoreDataService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PizzaStoreDataService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PizzaStoreDataService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

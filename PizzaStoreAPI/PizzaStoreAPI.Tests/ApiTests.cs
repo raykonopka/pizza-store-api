@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PizzaStoreAPI.Service;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -16,20 +17,11 @@ namespace PizzaStoreAPI.Tests
         [Fact]
         public void Test_GetAllSauces()
         {
-            HttpClient httpClient = new HttpClient();
+            ApplicationLogic processedData = new ApplicationLogic();
 
-            var actual = httpClient.GetAsync("http://34.193.163.157/pizza-store-api/api/sauces/").Result;
+            var actual = processedData.GetSauceTypes();
 
-            if (actual.IsSuccessStatusCode)
-            {
-                Debug.WriteLine("Sauce JSON Content Received.");
-            }
-            else
-            {
-                Debug.WriteLine("Sauce JSON Failed To Send.");
-            }
-
-            Assert.True(actual.IsSuccessStatusCode);
+            Assert.NotNull(actual);
         }
 
     }
